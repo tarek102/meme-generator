@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+}
+
 nav {
   background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
   padding: 20px;
@@ -13,9 +18,39 @@ nav {
   
 }
 
+main {
+  padding: 36px;
+}
+
 .title {
   color: #FFFFFF;
   font-size: 12px;
   font-family: inter;
   font-weight: 400;
+}
+
+
+.form {
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 17px;
+}
+
+.inputs {
+  font-family: "Karla", sans-serif;
+  text-indent: 5px;
+  border: 1px solid #D5D4D8;
+  border-radius: 5px;
+  
+}
+
+
+
+.submit-btn {
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  color: white;
+  grid-column: 1 / -1;
+  font-family: "Karla", sans-serif;
+  border: none;
+  border-radius: 5px;
 }
