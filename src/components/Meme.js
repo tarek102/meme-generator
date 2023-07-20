@@ -18,6 +18,9 @@ export const Meme = () => {
                 <input className='inputs' type='text' placeholder='Bottom Text'></input>
             <button onClick={getMemeImage} className='submit-btn'>Get a new meme image  🖼</button>
         </div>
+        <div className='image-div'>
+          <img className='meme-image' src={memeImage}></img>
+        </div>
     </main>
   )
 }
