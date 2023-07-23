@@ -3,12 +3,22 @@ import memesData from '../memesData'
 
 export const Meme = () => {
 
-  const [memeImage, setMemeImage] = React.useState("");
+  const [meme, setMeme] = React.useState({
+    topText: "",
+    bottomText: "",
+    randomImage: "http://i.imgflip.com/1bij.jpg"
+  });
+  const [allMemesImages, setAllMemesImages] = React.useState(memesData)
+
 
   function getMemeImage() {
-    const memesArray = memesData.data.memes;
+    const memesArray = allMemesImages.data.memes;
     const randomNaumber = Math.floor(Math.random() * memesArray.length)
-    setMemeImage(memesArray[randomNaumber].url)
+    const url = memesArray[randomNaumber].url
+    setMeme(prevMeme => ({
+      ...prevMeme,
+      randomImage: url
+    }))
   }
 
   return (
@@ -19,7 +29,7 @@ export const Meme = () => {
             <button onClick={getMemeImage} className='submit-btn'>Get a new meme image  🖼</button>
         </div>
         <div className='image-div'>
-          <img className='meme-image' src={memeImage}></img>
+          <img className='meme-image' alt='' src={meme.randomImage}></img>
         </div>
     </main>
   )

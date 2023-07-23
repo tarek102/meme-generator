@@ -45,7 +45,6 @@ main {
 }
 
 
-
 .submit-btn {
   background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
   color: white;
@@ -54,7 +53,6 @@ main {
   border: none;
   border-radius: 5px;
 }
-
 
 .meme-image {
   width: 100%;
