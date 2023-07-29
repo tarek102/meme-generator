@@ -24,12 +24,14 @@ export const Meme = () => {
   return (
     <main>
         <div className='form'>
-                <input className='inputs' type='text' placeholder='Top Text'></input>
-                <input className='inputs' type='text' placeholder='Bottom Text'></input>
-            <button onClick={getMemeImage} className='submit-btn'>Get a new meme image  🖼</button>
+          <input className='inputs' type='text' placeholder='Top Text'></input>
+          <input className='inputs' type='text' placeholder='Bottom Text'></input>
+          <button onClick={getMemeImage} className='submit-btn'>Get a new meme image  🖼</button>
         </div>
-        <div className='image-div'>
-          <img className='meme-image' alt='' src={meme.randomImage}></img>
+        <div className="meme">
+          <img src={meme.randomImage} className="meme--image" />
+          <h2 className="meme--text top">One does not simply</h2>
+          <h2 className="meme--text bottom">Walk into Mordor</h2>
         </div>
     </main>
   )
